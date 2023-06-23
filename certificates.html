@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meus Certificados</title>
+    <link rel="shortcut icon" type="image/x-icon" href="src/web/icon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .certificate {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .certificate:hover {
+            transform: translateY(-5px);
+        }
+
+        .certificate img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .certificate .title {
+            padding: 10px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Lightbox Overlay */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+
+        /* Lightbox Image */
+        .lightbox-image {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .certificates {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .certificate .title {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Meus <span style="color: #2e2e2e;">Certificados</span></h1>
+
+    <div class="certificates">
+        <div class="certificate">
+            <img src="/src/web/img1.png" alt="Certificado 1">
+            <div class="title">Certificado Solyd - Python Básico</div>
+        </div>
+        <div class="certificate">
+            <img src="/src/web/img2.png" alt="Certificado 2">
+            <div class="title">Certificado Solyd - Pentest Básico 2.0</div>
+        </div>
+        <div class="certificate">
+            <img src="/src/web/img3.png" alt="Certificado 3">
+            <div class="title">Certificado DS - Python para Ciência de Dados</div>
+        </div>
+        <div class="certificate">
+            <img src="/src/web/img4.png" alt="Certificado 4">
+            <div class="title">Certificado RocketSeat - Discover Completo</div>
+        </div>
+    </div>
+
+    <div class="lightbox-overlay"></div>
+    <img class="lightbox-image" src="" alt="Certificado em destaque">
+
+    <script>
+        var certificates = document.querySelectorAll('.certificate');
+        var lightboxOverlay = document.querySelector('.lightbox-overlay');
+        var lightboxImage = document.querySelector('.lightbox-image');
+
+        certificates.forEach(function(certificate) {
+            certificate.addEventListener('click', function() {
+                var imageSrc = this.querySelector('img').getAttribute('src');
+                lightboxImage.setAttribute('src', imageSrc);
+                lightboxOverlay.style.display = 'block';
+                lightboxImage.style.display = 'block';
+            });
+        });
+
+        lightboxOverlay.addEventListener('click', function() {
+            lightboxOverlay.style.display = 'none';
+            lightboxImage.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

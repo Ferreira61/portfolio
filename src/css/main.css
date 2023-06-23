@@ -1,0 +1,518 @@
+/* PERSONALIZAÇÕES GERAIS */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Source+Code+Pro:wght@200&display=swap');
+
+html.sr .load-hidden{
+    visibility: hidden;
+}
+
+
+
+html{
+    font-family: 'Source Code Pro', monospace;
+    
+}
+
+body{
+    background: rgb(23,1,41);
+    background: radial-gradient(circle, #2b2a2a 80%,#222121) 20%;
+    background-size: cover;
+    background-position: top center;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    margin: 0 auto;
+    max-width: 95%;
+    padding: 0 5px;
+}
+
+p::selection, h1::selection, h2::selection, h3::selection, span::selection, a::selection{
+    background: rgb(97, 23, 23);
+}
+
+.lord-icon{
+    width:35px;
+    height:35px;
+}
+
+.underline-anime{
+    display: inline-block;
+    margin-block: 2px;
+    text-decoration: none;
+    position: relative;
+}
+
+.underline-anime::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: rgb(243,234,249);
+    background: linear-gradient(90deg, rgba(75, 1, 1, 0.5) 0%, rgb(175, 12, 12) 56%);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.45s ease-out;
+    
+}
+
+.underline-anime:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* CABEÇALHO E DEPENDÊNCIAS */
+
+header{
+    background: rgba(17, 17, 17, 0.13);
+    font-weight: lighter;
+}
+
+img {
+    width: 720px;
+    animation: fadeIn 1.2s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav li{
+    margin: 0 0.5rem;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0 ;
+}
+
+.navbar li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+.logo h1{
+    font-size: 2rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.logo span{
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(rgb(122, 1, 1), rgb(61, 61, 61));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* CONTEÚDO PRINCIPAL */
+
+.bio h2{
+    font-size: 2rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.bio #nome{
+    font-size: 6rem;
+    font-family: 'Source Code Pro', monospace;
+}
+.bio span{
+
+    background: -webkit-linear-gradient(rgb(122, 1, 1), rgb(61, 61, 61));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    align-items: center;
+}
+
+.bio p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+section .nave{
+    width: 30vw;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    margin-left: 10vw;
+    -webkit-filter: drop-shadow(0 0 100px rgba(59, 3, 97, 0.5));
+    filter: drop-shadow(10px 0 100px rgba(245, 245, 245, 0.5));
+}
+
+#biosec,#tec{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5rem;
+    padding: 0.5rem;
+}
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem;
+    color: #fff;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    font-size: 5rem;
+    font-weight: 200;
+    font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
+}
+
+#tec{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#tec h2{
+    font-size: 3rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#tec span{
+    background: -webkit-linear-gradient(rgb(122, 1, 1), rgb(61, 61, 61));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    align-items: center;
+    font-size: 3.5rem;
+}
+
+.info-container{
+width: 50%;
+}
+
+#prof-name{
+    font-size: 3rem;
+    font-weight: 200;
+    color: rgb(238, 42, 42);
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#projetos{
+    margin: 4rem auto;
+}
+
+#projetos h2{
+    font-size: 3rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#projetos span{
+    background: -webkit-linear-gradient(rgb(122, 1, 1), rgb(61, 61, 61));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    align-items: center;
+    font-size: 3.5rem;
+}
+
+.projeto-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 0.5rem;
+}
+
+
+.projeto{
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem;
+    color: #fff;
+    text-align: left;
+    grid-area: auto;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
+}
+
+.border-anime{
+    border: 1px solid transparent;
+    transition: 1s;
+}
+
+.border-active{
+    border: 1px solid rgb(53, 12, 12);
+}
+
+.border-anime:hover{
+    border: 1px solid rgb(252, 27, 27);
+    transition: 1s;
+}
+
+.type{
+    font-size: 1rem;
+    font-weight: 200;
+    color: rgba(235, 20, 20, 0.959);
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+}
+.type i{
+    font-size: 1.2rem;
+}
+
+.projeto h3{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    font-family: 'Source Code Pro', monospace;
+}
+
+.projeto-descricao{
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+.projeto a{
+    color: rgb(126, 36, 36);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: 'Source Code Pro', monospace;
+    transition: 0.2s;
+}
+.projeto a:hover{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+/* RODAPÉ E CONTATO */
+/* MENU SOBREPOSTO */
+
+.menu{
+    position: fixed;
+    bottom: 0px;
+    right: 25px;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .toggle{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(252, 0, 0, 0.25);
+    backdrop-filter: blur( 14.5px );
+    -webkit-backdrop-filter: blur( 14.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: rgb(255, 255, 255);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.menu .toggle.active{
+    transform: rotate(136deg);
+    box-shadow: 0 0 0 35px rgba(0, 0, 0, 0.25), 0 0 0 35px rgba(29, 28, 28, 0.1);
+    background: transparent;
+    color: #ff0000;
+}
+
+.menu li a:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+.menu li{
+    position: absolute;
+    list-style: none;
+    left: 23px;
+    transform: rotate(calc(360deg / 5 * var(--i)));
+    transform-origin: 55px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.menu.active li{
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    font-size: 1.3em;
+    transform: rotate(calc(360deg / -5 * var(--i)));
+}
+
+
+/* Responsividade */
+
+
+
+
+@media screen and (max-width: 980px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    img {
+        display: none;
+      }
+    
+
+    .projeto-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-container{
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .bio h2{
+        display: block;
+        margin: 0 auto;
+    }
+    .bio #nome{
+        font-size: 5rem;
+    }
+
+    img {
+        display: none;
+      }
+    
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .grid-item{
+        width: 150px;
+        height: 150px;
+        font-size: 4rem;
+    }
+    .info-container{
+        width: 100%;
+    }
+    .projeto-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #projetos{
+        margin-top: 5rem;
+    }
+    
+}
+
+@media screen and (max-width: 452px){
+    .bio{
+        margin: 0 auto;
+    }
+    .bio #nome{
+        font-size: 3.5rem;
+    }
+
+    img {
+        display: none;
+      }
+    
+    .bio #nome, .bio span{
+        text-align: center;
+    }
+
+    #tec h2{
+        font-size: 2rem;
+    }
+
+    #tec span{
+        font-size: 2.5rem;
+    }
+
+    #prof-name{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+}
+
